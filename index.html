@@ -1,0 +1,45 @@
+<html>
+
+<head>
+</head>
+
+<body>
+  <style>
+    .sprite1 {
+        background: url('imgs/pikachu.png') no-repeat -5px -1px;
+        width: 22px;
+        height: 22px;
+    }
+    .sprite2 {
+        background: url('imgs/pikachu.png') no-repeat -30px 0;
+        width: 22px;
+        height: 22px;
+    }
+    .sprite3 {
+        background: url('imgs/pikachu.png') no-repeat -55px 0;
+        width: 22px;
+        height: 22px;
+    }
+  </style>
+  <div id="pikachu" class="sprite1">
+  </div>
+    <script>
+    pikachu.classList.add("sprite1")
+    function animatePikachu() {
+        var pikachu=document.getElementById("pikachu")
+        if (pikachu.classList.contains("sprite1")) {
+            pikachu.classList.remove("sprite1")
+            pikachu.classList.add("sprite2")
+        } else if (pikachu.classList.contains("sprite2")) {
+            pikachu.classList.remove("sprite2")
+            pikachu.classList.add("sprite3")
+        } else if (pikachu.classList.contains("sprite3")){
+            pikachu.classList.remove("sprite3")
+            pikachu.classList.add("sprite1")
+        }
+    }
+    setInterval(animatePikachu, 500)
+    </script>
+</body>
+
+</html>
